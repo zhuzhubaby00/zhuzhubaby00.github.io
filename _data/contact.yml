@@ -1,0 +1,13 @@
+- type: github
+  icon: fab fa-github
+- type: twitter
+  icon: fa-brands fa-x-twitter
+- type: email
+  icon: fas fa-envelope
+  noblank: true
+- type: rss
+  icon: fas fa-rss
+  noblank: true
+- type: bilibili
+  icon: fa-brands fa-bilibili
+  url: https://space.bilibili.com/670679523?spm_id_from=333.788.0.0
