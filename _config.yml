@@ -42,7 +42,7 @@ pageviews:
   provider: 
 theme_mode: 
 cdn: 
-avatar: ''
+avatar: /assets/img/avatar.jpg
 social_preview_image: 
 toc: true
 comments:
@@ -137,3 +137,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+head_includes: _includes/head.html

@@ -2,7 +2,9 @@
 icon: fas fa-info-circle
 order: 4
 layout: page
+title: 关于我
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+你好，很高兴在这里相遇。 
+本博客用来记录技术实践、阅读感悟与生活碎片。 在这里沉淀思考，留存走过的痕迹。 
+万事尽心尽力，而后顺其自然。 
