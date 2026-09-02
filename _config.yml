@@ -137,4 +137,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-head_includes: _includes/head.html
