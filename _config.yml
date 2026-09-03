@@ -46,7 +46,8 @@ avatar: /assets/img/avatar.jpg
 social_preview_image: 
 toc: true
 comments:
-  provider: 
+  provider: cusdis
+  cusdis: app_id:"b2dd84d5-b7cf-4566-9094-f7759964d5ae"
   disqus:
     shortname: 
   utterances:
