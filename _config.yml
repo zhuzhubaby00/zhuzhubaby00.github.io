@@ -46,9 +46,9 @@ avatar: /assets/img/avatar.jpg
 social_preview_image: 
 toc: true
 comments:
-  provider: false
+  provider: disqus
   disqus:
-    shortname: 
+    shortname: zhuzhubaby00
   utterances:
     repo: 
     issue_term: 
