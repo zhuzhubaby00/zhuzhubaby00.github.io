@@ -47,7 +47,7 @@ social_preview_image:
 toc: true
 comments:
   provider: waline
-  disqus:
+  waline:
     shortname: zhuzhubaby00
   utterances:
     repo: 
