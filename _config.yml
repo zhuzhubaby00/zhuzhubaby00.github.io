@@ -2,20 +2,19 @@ theme: jekyll-theme-chirpy
 lang: zh-CN
 timezone: Asia/Shanghai
 title: 筑梦之旅
-tagline: 属于你的e
+tagline: 属于你的e，记录生活感悟、技术笔记与随想碎片。
 description: 在这里记录生活感悟、技术笔记与随想碎片。
 url: https://zhuzhubaby00.github.io
 github:
   username: zhuzhubaby00
 twitter:
-  username: twitter_username
+  username: 
 social:
   name: zhuzhu
   email: 2651910270@qq.com
   fediverse_handle: 
   links:
-  - https://twitter.com/username
-  - https://github.com/username
+  - https://github.com/zhuzhubaby00
 webmaster_verifications:
   google: 
   bing: 
@@ -41,12 +40,13 @@ analytics:
 pageviews:
   provider: 
 theme_mode: 
-cdn: 
+cdn: jsdelivr
 avatar: /assets/img/avatar.jpg
-social_preview_image: 
+social_preview_image: /assets/img/preview-banner.jpg
 toc: true
 comments:
   provider: giscus
+  active: giscus
   giscus:
     repo: zhuzhubaby00/zhuzhubaby00.github.io
     repo_id: R_kgDOUJzndg
@@ -135,3 +135,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+reading_time: true
