@@ -40,7 +40,7 @@ analytics:
 pageviews:
   provider: 
 theme_mode: 
-cdn: jsdelivr
+cdn: 
 avatar: /assets/img/avatar.jpg
 social_preview_image: /assets/img/preview-banner.jpg
 toc: true
