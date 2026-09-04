@@ -1,7 +1,18 @@
+// waline外层卡片
 #waline {
   padding:20px;
   border-radius:14px;
   background:var(--card-bg);
   border:1px solid var(--border-color);
   box-shadow:0 2px 12px rgba(0,0,0,0.07);
+  margin-top:2rem;
+}
+
+// 内部输入框圆角
+#waline .wl-input {
+  border-radius: 10px !important;
+}
+// 单条评论卡片圆角
+#waline .wl-comment-item {
+  border-radius: 10px !important;
 }
