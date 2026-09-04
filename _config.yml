@@ -46,12 +46,7 @@ avatar: /assets/img/avatar.jpg
 social_preview_image: 
 toc: true
 comments:
-  provider: waline
-  waline:
-    shortname: zhuzhubaby00
-  utterances:
-    repo: 
-    issue_term: 
+  provider: giscus
   giscus:
     repo: 
     repo_id: 
@@ -62,6 +57,9 @@ comments:
     input_position: 
     lang: 
     reactions_enabled: 
+  utterances:
+    repo: 
+    issue_term: 
 assets:
   self_host:
     enabled: 
