@@ -48,15 +48,15 @@ toc: true
 comments:
   provider: giscus
   giscus:
-    repo: 
-    repo_id: 
-    category: 
-    category_id: 
-    mapping: 
-    strict: 
-    input_position: 
-    lang: 
-    reactions_enabled: 
+    repo: zhuzhubaby00/zhuzhubaby00.github.io
+    repo_id: R_kgDOUJzndg
+    category: Announcements
+    category_id: DIC_kwDOUJznds4DE11I
+    mapping: pathname
+    strict: 0
+    input_position: bottom
+    lang: zh-CN
+    reactions_enabled: 1
   utterances:
     repo: 
     issue_term: 
