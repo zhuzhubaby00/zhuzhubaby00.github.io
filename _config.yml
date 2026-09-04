@@ -42,7 +42,7 @@ pageviews:
 theme_mode: 
 cdn: 
 avatar: /assets/img/avatar.jpg
-social_preview_image: 
+social_preview_image: /assets/img/to/preview-banner.jpg
 toc: true
 comments:
   provider: giscus
