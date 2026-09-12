@@ -16,3 +16,79 @@
 #waline .wl-comment-item {
   border-radius: 10px !important;
 }
+
+/* ============================================
+   自定义 UI 增强
+   ============================================ */
+
+/* ---------- 1. 阅读进度条 ---------- */
+#reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #4a90d9, #67b8de);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ---------- 2. 文章卡片 hover 悬浮动效 ---------- */
+.post-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// 暗色模式下阴影稍微弱一点
+[data-mode="dark"] .post-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- 3. 代码块复制按钮 ---------- */
+.highlight {
+  position: relative;
+
+  .copy-code-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    line-height: 1.5;
+    border: 1px solid var(--border-color, #dce0e5);
+    border-radius: 6px;
+    background: var(--card-bg, #fff);
+    color: var(--text-color, #6b7280);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    z-index: 10;
+  }
+
+  &:hover .copy-code-btn {
+    opacity: 1;
+  }
+
+  .copy-code-btn:hover {
+    color: #4a90d9;
+    border-color: #4a90d9;
+  }
+
+  .copy-code-btn.copied {
+    color: #10b981;
+    border-color: #10b981;
+  }
+}
+
+// 窄屏设备上始终显示按钮（因为没有 hover）
+@media (hover: none) {
+  .highlight .copy-code-btn {
+    opacity: 1;
+  }
+}

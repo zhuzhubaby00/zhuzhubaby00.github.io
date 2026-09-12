@@ -1,0 +1,73 @@
+<!-- 阅读进度条 + 代码复制按钮（自定义增强） -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* ========== 1. 阅读进度条 ========== */
+  var progressBar = document.createElement('div');
+  progressBar.id = 'reading-progress-bar';
+  document.body.appendChild(progressBar);
+
+  function updateProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  /* ========== 2. 代码块复制按钮 ========== */
+  document.querySelectorAll('.highlight').forEach(function (block) {
+    // 已经有按钮的不重复添加
+    if (block.querySelector('.copy-code-btn')) return;
+
+    var btn = document.createElement('button');
+    btn.className = 'copy-code-btn';
+    btn.type = 'button';
+    btn.textContent = '复制';
+    btn.setAttribute('aria-label', '复制代码');
+
+    btn.addEventListener('click', function () {
+      var code = block.querySelector('code');
+      if (!code) return;
+
+      var text = code.innerText.replace(/\n$/, '');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          showCopied(btn);
+        }).catch(function () {
+          fallbackCopy(text, btn);
+        });
+      } else {
+        fallbackCopy(text, btn);
+      }
+    });
+
+    block.appendChild(btn);
+  });
+
+  function showCopied(btn) {
+    btn.textContent = '已复制 ✓';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.textContent = '复制';
+      btn.classList.remove('copied');
+    }, 2000);
+  }
+
+  function fallbackCopy(text, btn) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); showCopied(btn); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+});
+</script>

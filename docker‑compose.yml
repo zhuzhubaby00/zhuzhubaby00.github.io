@@ -1,11 +1,19 @@
-version: "3"
+﻿version: "3"
 services:
   jekyll:
-    image: jekyll/jekyll:4.2.2
-    command: jekyll serve --watch --force_polling --drafts
+    image: ruby:3.1-bookworm
+    command: >
+      sh -c "gem install bundler -v '~> 2.3' &&
+             bundle install &&
+             git config --global --add safe.directory /srv/jekyll &&
+             bundle exec jekyll serve --watch --force_polling --drafts --host 0.0.0.0"
     ports:
       - "4000:4000"
     volumes:
       - ./:/srv/jekyll
+      - gem_cache:/usr/local/bundle
+    working_dir: /srv/jekyll
     environment:
       - JEKYLL_ENV=development
+volumes:
+  gem_cache:
